@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Aidan Gauci's Portfolio - An AI student showcasing front-end web development projects and data science projects." />
+    <meta name="author" content="Aidan Gauci" />
 
     <link rel="stylesheet" href="styles.css" />
     <script src="main.js" defer></script>
@@ -17,6 +18,7 @@
         <ul>
           <li><a href="#about-me" class="nav-link">About Me</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -33,25 +35,69 @@
       <section id="skills">
         <h2 class="section-title">My Skills</h2>
         <div class="section-container">
-          <p class="skill-category"><strong>Programming:</strong> Python, JavaScript, HTML/CSS, SQL, React.js, Node.js</p>
-          <p class="skill-category"><strong>Tools:</strong> VSCode, Jupyter Notebooks, Git</p>
+          <div class="skill-category">
+            <strong>Programming:</strong>
+            <ul class="skill-list">
+              <li class="skill-list-element">Python</li>
+              <li class="skill-list-element">JavaScript</li>
+              <li class="skill-list-element">HTML/CSS</li>
+              <li class="skill-list-element">SQL</li>
+              <li class="skill-list-element">React.js</li>
+              <li class="skill-list-element">Node.js</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <strong>Tools</strong>
+            <ul class="skill-list">
+              <li class="skill-list-element">VSCode</li>
+              <li class="skill-list-element">Jupyter Notebooks</li>
+              <li class="skill-list-element">Git/Github</li>
+            </ul>
+          </div>
         </div>
+      </section>
+
+      <section id="education">
+        <h2 class="section-title">My Education</h2>
+        <article class="education-article">
+          <div class="education-article-header">
+            <div class="education-title-container">
+              <h3 class="education-title">University of Malta</h3>
+              <p class="education-date">2025 - 2028 (Expected)</p>
+            </div>
+            <p class="education-subtitle">BSc in Artificial Intelligence</p>
+          </div>
+          <p class="education-description">
+            <strong>Related Coursework:</strong> Foundations of Data Science, Programming for AI, AI Numerical Methods, Introduction to Databases and Information Management, Data Structures &
+            Algorithms, Foundations of Artificial Intelligence.
+          </p>
+        </article>
+        <article class="education-article">
+          <div class="education-article-header">
+            <div class="education-title-container">
+              <h3 class="education-title">Junior College</h3>
+              <p class="education-date">2023 - 2025</p>
+            </div>
+            <p class="education-subtitle">Matriculation Course</p>
+          </div>
+          <p class="education-description"><strong>A-Levels:</strong> Pure Maths (B), Computing (B)</p>
+        </article>
       </section>
 
       <section id="projects">
         <h2 class="section-title">My Projects</h2>
-        <article class="project-article">
-          <h3 class="project-article-title">Project</h3>
+        <article class="project-article" id="stock-inventory-manager">
+          <h3 class="project-article-title">Stock Inventory Manager</h3>
           <p class="project-article-desc"></p>
           <img class="project-image" src="/" alt="Project Background Image" />
         </article>
-        <article class="project-article">
-          <h3 class="project-article-title">Project</h3>
+        <article class="project-article" id="">
+          <h3 class="project-article-title">Cryptocurrency Correlation Analysis</h3>
           <p class="project-article-desc"></p>
           <img class="project-image" src="/" alt="Project Background Image" />
         </article>
-        <article class="project-article">
-          <h3 class="project-article-title">Project</h3>
+        <article class="project-article" id="weather-tourism-correlation">
+          <h3 class="project-article-title">Weather Tourism Correlation Project</h3>
           <p class="project-article-desc"></p>
           <img class="project-image" src="/" alt="Project Background Image" />
         </article>
