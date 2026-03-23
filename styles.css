@@ -5,9 +5,9 @@
 /* LIGHT MODE */
 @media (prefers-color-scheme: light) {
   :root {
-    --background-colour: #f9f9f9;
-    --section-colour: #ffffff;
-    --primary-text: #2d2d2d;
+    --background-colour: #ffffff;
+    --section-colour: #f3f4f6;
+    --article-colour: #ffffff;
     --secondary-text: #757575;
     --accent-colour: #4a5d4e;
     --border-colour: #e0e0e0;
@@ -19,6 +19,7 @@
   :root {
     --background-colour: #121212;
     --section-colour: #1e1e1e;
+    --article-colour: #252525;
     --primary-text: #f8f9fa;
     --secondary-text: #b0b0b0;
     --accent-colour: #6366f1;
@@ -46,7 +47,7 @@ header {
   top: 0;
   z-index: 10;
   background-color: var(--section-colour);
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 20px rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,12 +83,15 @@ header ul {
 }
 
 .nav-link {
-  width: clamp(80px, 100%, 120px);
+  display: inline-block;
+  width: 100px;
+  text-align: center;
   color: var(--secondary-text);
   font-family: var(--font-family);
   text-decoration: none;
   white-space: nowrap;
-  padding: 10px 20px;
+  padding: 10px 0;
+  margin: 0 20px;
   transition: opacity 0.2s ease;
 }
 
@@ -98,7 +102,7 @@ header ul {
 .active {
   font-weight: bold;
   color: var(--accent-colour);
-  border-bottom: 2px solid var(--accent-colour);
+  border-bottom: 3px solid var(--accent-colour);
 }
 
 /* MAIN */
@@ -108,24 +112,31 @@ main {
 }
 
 main section {
-  background-color: var(--section-colour);
+  max-width: 900px;
   border-radius: 10px;
-  margin: 20px 10px;
+  margin: 20px auto;
   padding: 20px;
+  background-color: var(--section-colour);
+}
+
+main section:first-child {
+  max-width: 1100px;
 }
 
 main section h1 {
   font-family: var(--font-family);
-  font-size: 36px;
+  font-size: 48px;
   color: var(--primary-text);
+  text-align: center;
   margin-top: 0px;
 }
 
 .section-title {
   font-family: var(--font-family);
-  font-size: 24px;
+  font-size: 36px;
   color: var(--primary-text);
   margin-top: 0px;
+  margin-bottom: 20px;
 }
 
 .about-me-text,
@@ -134,6 +145,10 @@ main section h1 {
   font-family: var(--font-family);
   font-size: 16px;
   color: var(--secondary-text);
+}
+
+.about-me-text {
+  text-align: justify;
 }
 
 .skill-category {
@@ -145,7 +160,31 @@ main section h1 {
 }
 
 .skill-list {
-  margin: 0px;
+  margin: 20px 20px;
+}
+
+.skill-category ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.skill-category li {
+  background: var(--background-color);
+  border: 1px solid var(--border-colour);
+  color: var(--secondary-text);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.skill-category li:hover {
+  border-color: var(--accent-colour);
+  color: var(--accent-colour);
+  transform: translateY(-2px);
 }
 
 .education-title-container {
@@ -184,6 +223,125 @@ main section h1 {
   margin-top: 4px;
 }
 
+.project-article-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 15px;
+}
+
+.project-article {
+  height: 400px;
+  min-height: 300px;
+  width: auto;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--article-colour);
+}
+
+.project-article-text-container {
+  flex-grow: 1;
+  height: auto;
+  width: auto;
+}
+
+#stock-inventory-manager .project-article-text-container {
+  background-image: url('img/projects/inventory-levels-boxes.1.10.avif');
+  background-size: cover;
+  background-position: center;
+}
+
+/*# .project-article-text-container {
+  background-image: ;
+}*/
+
+#weather-tourism-correlation .project-article-text-container {
+  background-image: url('img/projects/sunny-beach-day-stockcake.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+.project-article-title {
+  text-align: center;
+  margin: 15px 0px;
+  padding: 0px 15px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+.project-article-desc {
+  font-family: var(--font-family);
+  font-size: 12px;
+  color: var(--secondary-text);
+}
+
+.project-article-button-container {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  border-top: 2px solid var(--border-colour);
+}
+
+.project-article-button {
+  height: fit-content;
+  width: 100px;
+  padding: 5px 8px;
+  background-color: var(--section-colour);
+  border: 2px solid var(--accent-colour);
+  border-radius: 20px;
+  color: var(--accent-colour);
+  font-family: var(--font-family);
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.project-article-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/*
+<section id="projects">
+  <h2 class="section-title">My Projects</h2>
+  <div class="project-article-container">
+    <article class="project-article" id="stock-inventory-manager">
+      <div class="project-article-text-container">
+        <h3 class="project-article-title">Stock Inventory Manager</h3>
+        <p class="project-article-desc"></p>
+      </div>
+      <div class="project-article-button-container">
+        <button class="project-article-button">Read More</button>
+        <button class="project-article-button">View Code</button>
+      </div>
+    </article>
+    <article class="project-article" id="">
+      <div class="project-article-text-container">
+        <h3 class="project-article-title">Sportsbetting Winner Prediction</h3>
+        <p class="project-article-desc"></p>
+      </div>
+      <div class="project-article-button-container">
+        <button class="project-article-button">Read More</button>
+        <button class="project-article-button">View Code</button>
+      </div>
+    </article>
+    <article class="project-article" id="weather-tourism-correlation">
+      <div class="project-article-text-container">
+        <h3 class="project-article-title">Weather Tourism Correlation Project</h3>
+        <p class="project-article-desc"></p>
+      </div>
+      <div class="project-article-button-container">
+        <button class="project-article-button">Read More</button>
+        <button class="project-article-button">View Code</button>
+      </div>
+    </article>
+  </div>
+</section>
+*/
+
 /* FOOTER */
 footer {
   background-color: var(--section-colour);
@@ -192,6 +350,6 @@ footer {
 
 .footer-text {
   font-family: var(--font-family);
-  font-size: 12px;
+  font-size: 14px;
   color: var(--secondary-text);
 }
