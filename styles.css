@@ -1,0 +1,23 @@
+/* LIGHT MODE */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-colour: #f9f9f9;
+    --section-colour: #ffffff;
+    --primary-text: #2d2d2d;
+    --secondary-text: #757575;
+    --accent-colour: #4a5d4e;
+    --border-colour: #e0e0e0;
+  }
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-colour: #121212;
+    --section-colour: #1e1e1e;
+    --primary-text: #f8f9fa;
+    --secondary-text: #b0b0b0;
+    --accent-colour: #6366f1;
+    --border-colour: #333333;
+  }
+}
