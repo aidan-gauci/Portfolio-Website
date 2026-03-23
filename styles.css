@@ -30,15 +30,23 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0px;
 }
 
 /* HEADER */
 header {
-  padding: 10px;
+  padding: 20px 0px;
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   background-color: var(--section-colour);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,14 +82,116 @@ header ul {
 }
 
 .nav-link {
+  width: clamp(80px, 100%, 120px);
   color: var(--secondary-text);
   font-family: var(--font-family);
   text-decoration: none;
   white-space: nowrap;
-  padding: 10px 30px;
+  padding: 10px 20px;
   transition: opacity 0.2s ease;
 }
 
 .nav-link:hover {
   opacity: 0.7;
+}
+
+.active {
+  font-weight: bold;
+  color: var(--accent-colour);
+  border-bottom: 2px solid var(--accent-colour);
+}
+
+/* MAIN */
+main {
+  padding: 20px 40px;
+  background-color: var(--background-colour);
+}
+
+main section {
+  background-color: var(--section-colour);
+  border-radius: 10px;
+  margin: 20px 10px;
+  padding: 20px;
+}
+
+main section h1 {
+  font-family: var(--font-family);
+  font-size: 36px;
+  color: var(--primary-text);
+  margin-top: 0px;
+}
+
+.section-title {
+  font-family: var(--font-family);
+  font-size: 24px;
+  color: var(--primary-text);
+  margin-top: 0px;
+}
+
+.about-me-text,
+.skill-category,
+.education-description {
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: var(--secondary-text);
+}
+
+.skill-category {
+  margin-bottom: 20px;
+}
+
+.skill-category:last-child {
+  margin-bottom: 10px;
+}
+
+.skill-list {
+  margin: 0px;
+}
+
+.education-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.education-title,
+.project-article-title {
+  font-family: var(--font-family);
+  font-size: 20px;
+  color: var(--primary-text);
+}
+
+.education-title,
+.education-date {
+  height: fit-content;
+  margin: 0px;
+}
+
+.education-date {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 200;
+  color: var(--accent-colour);
+}
+
+.education-subtitle {
+  font-family: var(--font-family);
+  font-size: 12px;
+  color: var(--secondary-text);
+}
+
+.education-subtitle {
+  margin-top: 4px;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--section-colour);
+  padding: 10px 20px;
+}
+
+.footer-text {
+  font-family: var(--font-family);
+  font-size: 12px;
+  color: var(--secondary-text);
 }
