@@ -1,3 +1,7 @@
+:root {
+  --font-family: 'Inter', sans-serif;
+}
+
 /* LIGHT MODE */
 @media (prefers-color-scheme: light) {
   :root {
@@ -20,4 +24,64 @@
     --accent-colour: #6366f1;
     --border-colour: #333333;
   }
+
+  img {
+    filter: brightness(0.8) contrast(1.2);
+  }
+}
+
+body {
+  margin: 0px;
+}
+
+/* HEADER */
+header {
+  padding: 10px;
+  width: 100%;
+  background-color: var(--section-colour);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wordmark {
+  color: var(--primary-text);
+  font-size: 36px;
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-stretch: condensed;
+  letter-spacing: -0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+
+.wordmark:hover {
+  opacity: 0.7;
+}
+
+header ul {
+  width: 80%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  flex-wrap: nowrap;
+}
+
+.nav-link {
+  color: var(--secondary-text);
+  font-family: var(--font-family);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 10px 30px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
 }
