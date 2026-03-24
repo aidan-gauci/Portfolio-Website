@@ -5,7 +5,7 @@ const headerHeight = document.querySelector('header').offsetHeight;
 
 const observerOptions = {
   root: null,
-  rootMargin: `-${headerHeight}px 0px -80% 0px`,
+  rootMargin: `-${headerHeight}px 0px -90% 0px`,
   threshold: 0,
 };
 
@@ -24,3 +24,16 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 sections.forEach((section) => observer.observe(section));
+
+// Project Image Overlay
+const articles = document.querySelectorAll('.project-article');
+
+articles.forEach((article) => {
+  article.addEventListener('mouseenter', () => {
+    article.classList.add('is-hovered');
+  });
+
+  article.addEventListener('mouseleave', () => {
+    article.classList.remove('is-hovered');
+  });
+});

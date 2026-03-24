@@ -12,6 +12,10 @@
     --accent-colour: #4a5d4e;
     --border-colour: #e0e0e0;
   }
+
+  img {
+    filter: brightness(1) grayscale(0);
+  }
 }
 
 /* DARK MODE */
@@ -27,7 +31,7 @@
   }
 
   img {
-    filter: brightness(0.8) contrast(1.2);
+    filter: brightness(0.7) grayscale(0);
   }
 }
 
@@ -41,13 +45,13 @@ body {
 
 /* HEADER */
 header {
-  padding: 20px 0px;
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 10;
   background-color: var(--section-colour);
   box-shadow: 0 10px 20px rgb(0, 0, 0);
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,8 +82,13 @@ header ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 3px;
   padding: 0px;
   flex-wrap: nowrap;
+}
+
+.nav {
+  height: fit-content;
 }
 
 .nav-link {
@@ -209,7 +218,8 @@ main section h1 {
 .education-date {
   font-family: var(--font-family);
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 500;
+  opacity: 0.9;
   color: var(--accent-colour);
 }
 
@@ -236,7 +246,6 @@ main section h1 {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   background-color: var(--article-colour);
 }
 
@@ -244,22 +253,7 @@ main section h1 {
   flex-grow: 1;
   height: auto;
   width: auto;
-}
-
-#stock-inventory-manager .project-article-text-container {
-  background-image: url('img/projects/inventory-levels-boxes.1.10.avif');
-  background-size: cover;
-  background-position: center;
-}
-
-/*# .project-article-text-container {
-  background-image: ;
-}*/
-
-#weather-tourism-correlation .project-article-text-container {
-  background-image: url('img/projects/sunny-beach-day-stockcake.webp');
-  background-size: cover;
-  background-position: center;
+  position: relative;
 }
 
 .project-article-title {
@@ -267,17 +261,64 @@ main section h1 {
   margin: 15px 0px;
   padding: 0px 15px;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  z-index: 1;
+  position: relative;
 }
 
 .project-article-desc {
   font-family: var(--font-family);
-  font-size: 12px;
-  color: var(--secondary-text);
+  font-size: 16px;
+  color: var(--primary-text);
+  line-height: 25px;
+  margin-top: 36px;
+  padding: 10px 20px;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  opacity: 0;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+}
+
+.project-article.is-hovered .project-article-desc {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.project-article-tags {
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: var(--primary-text);
+  background-color: var(--accent-colour);
+  border-radius: 20px;
+  padding: 5px 12px;
+  margin: 5px 0px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  left: -10px;
+}
+
+.project-article-background {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: filter 0.15s ease;
+}
+
+.project-article.is-hovered .project-article-background {
+  filter: brightness(0.3) grayscale(1);
 }
 
 .project-article-button-container {
   height: 60px;
   width: 100%;
+  border-radius: 0px 0px 15px 15px;
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -303,44 +344,6 @@ main section h1 {
   transform: scale(1.1);
   cursor: pointer;
 }
-
-/*
-<section id="projects">
-  <h2 class="section-title">My Projects</h2>
-  <div class="project-article-container">
-    <article class="project-article" id="stock-inventory-manager">
-      <div class="project-article-text-container">
-        <h3 class="project-article-title">Stock Inventory Manager</h3>
-        <p class="project-article-desc"></p>
-      </div>
-      <div class="project-article-button-container">
-        <button class="project-article-button">Read More</button>
-        <button class="project-article-button">View Code</button>
-      </div>
-    </article>
-    <article class="project-article" id="">
-      <div class="project-article-text-container">
-        <h3 class="project-article-title">Sportsbetting Winner Prediction</h3>
-        <p class="project-article-desc"></p>
-      </div>
-      <div class="project-article-button-container">
-        <button class="project-article-button">Read More</button>
-        <button class="project-article-button">View Code</button>
-      </div>
-    </article>
-    <article class="project-article" id="weather-tourism-correlation">
-      <div class="project-article-text-container">
-        <h3 class="project-article-title">Weather Tourism Correlation Project</h3>
-        <p class="project-article-desc"></p>
-      </div>
-      <div class="project-article-button-container">
-        <button class="project-article-button">Read More</button>
-        <button class="project-article-button">View Code</button>
-      </div>
-    </article>
-  </div>
-</section>
-*/
 
 /* FOOTER */
 footer {
