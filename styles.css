@@ -122,7 +122,7 @@ main {
 
 main section {
   max-width: 900px;
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 30px auto;
   padding: 20px;
   background-color: var(--section-colour);
@@ -213,6 +213,31 @@ main section {
   transform: translateY(-2px);
 }
 
+.education-article-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+.education-article {
+  height: 400px;
+  min-height: 300px;
+  width: auto;
+  border-radius: 15px;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-content: start;
+  background-color: var(--article-colour);
+  position: relative;
+}
+
+.education-article-header {
+  width: auto;
+  padding: 20px 20px 0px 20px;
+  border-bottom: 2px solid var(--border-colour);
+}
+
 .education-title-container {
   display: flex;
   justify-content: space-between;
@@ -244,10 +269,84 @@ main section {
   font-family: var(--font-family);
   font-size: 12px;
   color: var(--secondary-text);
+  margin-top: 4px;
 }
 
-.education-subtitle {
-  margin-top: 4px;
+.education-article-body {
+  height: 100%;
+  width: auto;
+  padding: 0px 20px;
+  position: relative;
+}
+
+.education-description {
+  color: var(--primary-text);
+  line-height: 25px;
+  margin: 16px 0px;
+  padding-top: 20px;
+  position: relative;
+  opacity: 0;
+  z-index: 1;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+}
+
+.education-description ul {
+  margin: 0px;
+  position: absolute;
+  left: -10px;
+}
+
+.education-article.is-hovered .education-description {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.education-link {
+  height: fit-content;
+  width: 65px;
+  text-align: center;
+  padding: 5px 10px;
+  background-color: var(--section-colour);
+  border: 2px solid var(--accent-colour);
+  border-radius: 20px;
+  color: var(--accent-colour);
+  font-family: var(--font-family);
+  font-size: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  bottom: 0px;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+}
+
+.education-article.is-hovered .education-link {
+  opacity: 1;
+  transform: translate(-50%, -20px);
+  pointer-events: auto;
+}
+
+.education-article-background {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px 0px 15px 15px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: filter 0.15s ease;
+}
+
+.education-article.is-hovered .education-article-background {
+  filter: brightness(0.3) grayscale(1);
 }
 
 .project-article-container {

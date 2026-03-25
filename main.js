@@ -25,15 +25,28 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach((section) => observer.observe(section));
 
-// Project Image Overlay
-const articles = document.querySelectorAll('.project-article');
+// Education Image Overlay
+const education = document.querySelectorAll('.education-article');
 
-articles.forEach((article) => {
-  article.addEventListener('mouseenter', () => {
-    article.classList.add('is-hovered');
+education.forEach((place) => {
+  place.addEventListener('mouseenter', () => {
+    place.classList.add('is-hovered');
   });
 
-  article.addEventListener('mouseleave', () => {
-    article.classList.remove('is-hovered');
+  place.addEventListener('mouseleave', () => {
+    place.classList.remove('is-hovered');
+  });
+});
+
+// Project Image Overlay
+const projects = document.querySelectorAll('.project-article');
+
+projects.forEach((project) => {
+  project.addEventListener('mouseenter', () => {
+    project.classList.add('is-hovered');
+  });
+
+  project.addEventListener('mouseleave', () => {
+    project.classList.remove('is-hovered');
   });
 });
