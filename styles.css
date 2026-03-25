@@ -10,14 +10,18 @@
     --article-colour: #ffffff;
     --primary-text: #111827;
     --secondary-text: #6b7280;
+    --text-override: #ececec;
     --accent-colour: #126a32;
-    --border-colour: #e5e7eb;
     --shadow-colour: #929292;
   }
 
   img {
     opacity: 1;
     filter: brightness(1) blur(0px);
+  }
+
+  .skill-title {
+    color: var(--article-colour);
   }
 
   .education-article.is-hovered .education-article-background {
@@ -47,8 +51,8 @@
     --article-colour: #252525;
     --primary-text: #f8f9fa;
     --secondary-text: #b0b0b0;
+    --text-override: #f8f9fa;
     --accent-colour: #6366f1;
-    --border-colour: #333333;
     --shadow-colour: #000000;
   }
 
@@ -191,7 +195,6 @@ main section {
 }
 
 .about-me-text,
-.skill-category,
 .education-description {
   font-family: var(--font-family);
   font-size: 16px;
@@ -202,7 +205,7 @@ main section {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 40px;
+  gap: 25px;
   padding: 0px 20px;
 }
 
@@ -215,6 +218,7 @@ main section {
 
 .about-me-text {
   text-align: justify;
+  line-height: 25px;
 }
 
 .about-me-link-container {
@@ -258,44 +262,89 @@ main section {
   width: 250px;
   margin: 20px 0px;
   border-radius: calc(50%);
-  border: 3px solid var(--border-colour);
+  border: 3px solid var(--accent-colour);
   box-shadow: 0 10px 20px var(--shadow-colour);
 }
 
-.skill-category {
-  margin-bottom: 20px;
+.education-title,
+.project-article-title {
+  font-family: var(--font-family);
+  font-size: 20px;
+  color: var(--primary-text);
 }
 
-.skill-category:last-child {
-  margin-bottom: 10px;
+#skills .section-title {
+  margin-bottom: 0px;
+}
+
+.skill-title {
+  width: fit-content;
+  padding: 10px 20px;
+  padding-bottom: 25px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  border-radius: 15px 15px 0px 0px;
+  background-color: var(--accent-colour);
+  color: var(--text-override);
+  font-family: var(--font-family);
+  font-size: 20px;
+  position: relative;
+  bottom: -15px;
+  z-index: 0;
 }
 
 .skill-list {
-  margin: 20px 20px;
+  height: auto;
+  width: auto;
+  padding: 0px 20px;
+  font-family: var(--font-family);
+  font-size: 16px;
+  background-color: var(--article-colour);
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
 }
 
-.skill-category ul {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-}
-
-.skill-category li {
-  background: var(--background-color);
-  border: 1px solid var(--border-colour);
+.skill-element-container {
+  height: fit-content;
+  width: 100%;
   color: var(--secondary-text);
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: 55px 180px 1fr;
+  align-items: center;
+  position: relative;
+  border-bottom: 2px solid var(--accent-colour);
 }
 
-.skill-category li:hover {
-  border-color: var(--accent-colour);
+.skill-element-container:last-child {
+  border-bottom: 0px;
+}
+
+.skill-icon {
+  height: 30px;
+  width: auto;
+  aspect-ratio: 1;
+  margin-left: 10px;
+}
+
+.skill-element-name {
+  color: var(--primary-text);
+  font-weight: 600;
+  transform-origin: left;
+  scale: 1;
+  transition:
+    color 0.15s ease,
+    scale 0.15s ease;
+}
+
+.skill-element-container.is-hovered .skill-element-name {
   color: var(--accent-colour);
-  transform: translateY(-2px);
+  scale: 1.1;
+}
+
+.skill-element-description {
+  color: var(--secondary-text);
 }
 
 .education-article-container {
@@ -320,20 +369,13 @@ main section {
 .education-article-header {
   width: auto;
   padding: 20px 20px 0px 20px;
-  border-bottom: 2px solid var(--border-colour);
+  border-bottom: 2px solid var(--accent-colour);
 }
 
 .education-title-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.education-title,
-.project-article-title {
-  font-family: var(--font-family);
-  font-size: 20px;
-  color: var(--primary-text);
 }
 
 .education-title,
@@ -498,7 +540,7 @@ main section {
 .project-article-tags {
   font-family: var(--font-family);
   font-size: 14px;
-  color: var(--primary-text);
+  color: var(--text-override);
   background-color: var(--accent-colour);
   border-radius: 6px 20px 20px 6px;
   padding: 5px 12px;
@@ -532,7 +574,7 @@ main section {
   justify-content: center;
   align-items: center;
   background-color: inherit;
-  border-top: 2px solid var(--border-colour);
+  border-top: 2px solid var(--accent-colour);
 }
 
 .project-article-button {
@@ -557,7 +599,7 @@ main section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 60px;
-  padding: 0px 60px;
+  padding: 0px 60px 25px 60px;
 }
 
 .contact-link {

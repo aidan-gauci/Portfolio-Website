@@ -25,41 +25,30 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach((section) => observer.observe(section));
 
+// Interactive Skills Descriptions
+function isHovering(elementList) {
+  elementList.forEach((element) => {
+    element.addEventListener('mouseenter', () => {
+      element.classList.add('is-hovered');
+    });
+
+    element.addEventListener('mouseleave', () => {
+      element.classList.remove('is-hovered');
+    });
+  });
+}
+
+const skills = document.querySelectorAll('.skill-element-container');
+isHovering(skills);
+
 // Education Image Overlay
 const education = document.querySelectorAll('.education-article');
-
-education.forEach((place) => {
-  place.addEventListener('mouseenter', () => {
-    place.classList.add('is-hovered');
-  });
-
-  place.addEventListener('mouseleave', () => {
-    place.classList.remove('is-hovered');
-  });
-});
+isHovering(education);
 
 // Project Image Overlay
 const projects = document.querySelectorAll('.project-article');
-
-projects.forEach((project) => {
-  project.addEventListener('mouseenter', () => {
-    project.classList.add('is-hovered');
-  });
-
-  project.addEventListener('mouseleave', () => {
-    project.classList.remove('is-hovered');
-  });
-});
+isHovering(projects);
 
 // Interactive Contact Buttons
 const contacts = document.querySelectorAll('.contact-link');
-
-contacts.forEach((contact) => {
-  contact.addEventListener('mouseenter', () => {
-    contact.classList.add('is-hovered');
-  });
-
-  contact.addEventListener('mouseleave', () => {
-    contact.classList.remove('is-hovered');
-  });
-});
+isHovering(contacts);
