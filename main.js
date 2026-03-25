@@ -50,3 +50,16 @@ projects.forEach((project) => {
     project.classList.remove('is-hovered');
   });
 });
+
+// Interactive Contact Buttons
+const contacts = document.querySelectorAll('.contact-link');
+
+contacts.forEach((contact) => {
+  contact.addEventListener('mouseenter', () => {
+    contact.classList.add('is-hovered');
+  });
+
+  contact.addEventListener('mouseleave', () => {
+    contact.classList.remove('is-hovered');
+  });
+});
