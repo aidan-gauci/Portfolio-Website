@@ -113,9 +113,7 @@ header {
   color: var(--primary-text);
   font-size: var(--font-size-2);
   font-family: var(--font-family);
-  font-weight: 200;
-  font-stretch: condensed;
-  letter-spacing: -0.1em;
+  font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
@@ -265,7 +263,6 @@ main section {
 .profile-pic {
   height: 250px;
   width: 250px;
-  margin: 20px 0px;
   border-radius: calc(50%);
   border: 3px solid var(--accent-colour);
   box-shadow: 0 10px 20px var(--shadow-colour);
