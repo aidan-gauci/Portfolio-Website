@@ -142,13 +142,13 @@ header ul {
 
 .nav-link {
   display: inline-block;
-  width: 100px;
+  width: fit-content;
   text-align: center;
   color: var(--secondary-text);
   font-family: var(--font-family);
   text-decoration: none;
   white-space: nowrap;
-  padding: 10px 0;
+  padding: 10px 5px;
   margin: 0 20px;
   transition: opacity 0.2s ease;
 }
@@ -239,7 +239,7 @@ main section {
 
 .about-me-link {
   height: fit-content;
-  width: 100px;
+  width: fit-content;
   text-align: center;
   padding: 8px 15px;
   background-color: var(--section-colour);
@@ -434,7 +434,7 @@ main section {
 
 .education-link {
   height: fit-content;
-  width: 80px;
+  width: fit-content;
   text-align: center;
   padding: 8px 15px;
   background-color: var(--section-colour);
@@ -489,7 +489,7 @@ main section {
 
 .project-article-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   column-gap: 15px;
 }
 
@@ -568,7 +568,7 @@ main section {
     filter 0.15s ease;
 }
 
-.project-article-button-container {
+.project-article-link-container {
   height: 65px;
   min-height: 60px;
   width: 100%;
@@ -581,10 +581,10 @@ main section {
   border-top: 2px solid var(--accent-colour);
 }
 
-.project-article-button {
+.project-article-link {
   height: fit-content;
-  width: 100px;
-  padding: 6px 10px;
+  width: fit-content;
+  padding: 8px 15px;
   background-color: var(--section-colour);
   border: 2px solid var(--accent-colour);
   border-radius: 20px;
@@ -592,10 +592,11 @@ main section {
   font-family: var(--font-family);
   font-size: var(--font-size-5);
   font-weight: bold;
+  text-align: center;
   transition: transform 0.2s ease;
 }
 
-.project-article-button:hover {
+.project-article-link:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -708,7 +709,6 @@ footer {
   }
 
   .nav-link {
-    width: 90px;
     margin: 0px 10px;
   }
 
@@ -755,7 +755,7 @@ footer {
   .project-article-container {
     grid-template-columns: none;
     column-gap: 0px;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     row-gap: 35px;
   }
 
@@ -781,7 +781,6 @@ footer {
   }
 
   .nav-link {
-    width: 70px;
     font-size: var(--font-size-4);
     margin: 0px 5px;
   }
@@ -833,7 +832,7 @@ footer {
   .project-article-container {
     grid-template-columns: none;
     column-gap: 0px;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     row-gap: 35px;
   }
 
@@ -880,7 +879,6 @@ footer {
   }
 
   .nav-link {
-    width: 60px;
     font-size: var(--font-size-4);
     margin: 0px 5px;
   }
@@ -900,7 +898,6 @@ footer {
   }
 
   .about-me-link {
-    width: 80px;
     padding: 6px 10px;
   }
 
@@ -941,7 +938,7 @@ footer {
   .project-article-container {
     grid-template-columns: none;
     column-gap: 0px;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     row-gap: 35px;
   }
 
@@ -988,7 +985,6 @@ footer {
   }
 
   .nav-link {
-    width: 60px;
     font-size: var(--font-size-4);
     margin: 0px;
   }
@@ -1008,7 +1004,6 @@ footer {
   }
 
   .about-me-link {
-    width: 80px;
     padding: 6px 10px;
   }
 
@@ -1049,7 +1044,7 @@ footer {
   .project-article-container {
     grid-template-columns: none;
     column-gap: 0px;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     row-gap: 35px;
   }
 
