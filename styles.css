@@ -664,7 +664,7 @@ footer {
   color: var(--secondary-text);
 }
 
-@media (min-width: 819px) and (max-width: 1000px) {
+@media (min-width: 880px) and (max-width: 1000px) {
   :root {
     --font-size-1: 36px;
     --font-size-2: 24px;
@@ -699,7 +699,7 @@ footer {
   }
 }
 
-@media (min-width: 620px) and (max-width: 819px) {
+@media (min-width: 620px) and (max-width: 880px) {
   :root {
     --font-size-1: 36px;
     --font-size-2: 24px;
