@@ -491,7 +491,7 @@ main section {
 .project-article-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 15px;
+  column-gap: 20px;
 }
 
 .project-article {
@@ -675,6 +675,10 @@ footer {
     --font-size-6: 12px;
   }
 
+  .about-me-text {
+    line-height: 25px;
+  }
+
   .profile-pic {
     height: 200px;
     width: 200px;
@@ -708,6 +712,14 @@ footer {
     --font-size-4: 14px;
     --font-size-5: 13px;
     --font-size-6: 12px;
+  }
+
+  .about-me-text-container {
+    margin: 10px 0px;
+  }
+
+  .about-me-text {
+    line-height: 25px;
   }
 
   .nav-link {
@@ -797,6 +809,14 @@ footer {
     gap: 0px;
   }
 
+  .about-me-text-container {
+    margin: 10px 0px;
+  }
+
+  .about-me-text {
+    line-height: 22.5px;
+  }
+
   .profile-pic {
     height: 160px;
     width: 160px;
@@ -862,7 +882,7 @@ footer {
   }
 }
 
-@media (min-width: 360px) and (max-width: 449px) {
+@media (min-width: 360px) and (max-width: 450px) {
   :root {
     --font-size-1: 32px;
     --font-size-2: 22px;
@@ -874,6 +894,14 @@ footer {
 
   main {
     padding: 10px 10px;
+  }
+
+  .about-me-text-container {
+    margin: 10px 0px;
+  }
+
+  .about-me-text {
+    line-height: 22.5px;
   }
 
   nav ul {
@@ -968,7 +996,7 @@ footer {
   }
 }
 
-@media (max-width: 359px) {
+@media (max-width: 360px) {
   :root {
     --font-size-1: 32px;
     --font-size-2: 22px;
@@ -980,6 +1008,14 @@ footer {
 
   main {
     padding: 10px 10px;
+  }
+
+  .about-me-text-container {
+    margin: 10px 0px;
+  }
+
+  .about-me-text {
+    line-height: 22.5px;
   }
 
   nav ul {
