@@ -10,8 +10,8 @@ This project allows me to have one accessible central hub on which I can display
 
 **Image Credits:**
 
-* Animal Dataset Cleaning: https://unsplash.com/s/photos/zoo-animal
-* Weather-Tourism Data Analysis: https://stockcake.com/i/sunny-beach-day_1356549_986051
+* European Wildlife Dataset Cleaning Image: https://unsplash.com/s/photos/zoo-animal
+* Weather-Tourism Data Analysis Image: https://stockcake.com/i/sunny-beach-day_1356549_986051
 
 **Upcoming Plans:**
 
@@ -20,12 +20,7 @@ This project allows me to have one accessible central hub on which I can display
 
 **How to Run:**
 
-1. Ensure you have a modern browser installed.
-2. Clone the repository:
-```git clone https://github.com/aidan-gauci/Portfolio-Website.git```
-3. Navigate to repository directory: 
-```cd Portfolio-Website```
-4. Open **index.html** in your browser.
+* ```aidan-gauci.github.io/Portfolio-Website```
 
 **Limitations:**
 
