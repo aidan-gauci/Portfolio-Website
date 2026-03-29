@@ -25,3 +25,4 @@ This project allows me to have one accessible central hub on which I can display
 **Limitations:**
 
 * Website supports any dimensions of any device width above 320px. Anything below this will break the website.
+* Navigation link highlighting does not function properly on mobile devices.
