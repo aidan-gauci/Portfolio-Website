@@ -67,6 +67,10 @@
     filter: brightness(0.7) blur(0px);
   }
 
+  .profile-pic {
+    filter: brightness(1);
+  }
+
   .education-article.is-hovered .education-article-background {
     opacity: 1;
     filter: brightness(0.45) blur(4px);
@@ -332,7 +336,7 @@ main section {
 
 .skill-element-name {
   color: var(--primary-text);
-  font-weight: 600;
+  font-weight: bold;
   transform-origin: left;
   scale: 1;
   transition:
@@ -389,7 +393,7 @@ main section {
 .education-date {
   font-family: var(--font-family);
   font-size: var(--font-size-5);
-  font-weight: 500;
+  font-weight: bold;
   color: var(--accent-colour);
 }
 
@@ -896,14 +900,6 @@ footer {
     padding: 10px 10px;
   }
 
-  .about-me-text-container {
-    margin: 10px 0px;
-  }
-
-  .about-me-text {
-    line-height: 22.5px;
-  }
-
   nav ul {
     margin-top: 5px;
   }
@@ -919,8 +915,17 @@ footer {
   }
 
   .about-me-container {
+    padding: 0px 5px;
     flex-direction: column-reverse;
     gap: 0px;
+  }
+
+  .about-me-text-container {
+    margin: 10px 0px;
+  }
+
+  .about-me-text {
+    line-height: 22.5px;
   }
 
   .about-me-link-container {
@@ -1010,14 +1015,6 @@ footer {
     padding: 10px 10px;
   }
 
-  .about-me-text-container {
-    margin: 10px 0px;
-  }
-
-  .about-me-text {
-    line-height: 22.5px;
-  }
-
   nav ul {
     margin-top: 5px;
   }
@@ -1033,8 +1030,17 @@ footer {
   }
 
   .about-me-container {
+    padding: 0px 5px;
     flex-direction: column-reverse;
     gap: 0px;
+  }
+
+  .about-me-text-container {
+    margin: 10px 0px;
+  }
+
+  .about-me-text {
+    line-height: 22.5px;
   }
 
   .about-me-link-container {
@@ -1075,7 +1081,12 @@ footer {
     justify-content: left;
   }
 
+  .education-article-body {
+    padding: 0px 12.5px;
+  }
+
   .education-description {
+    padding-top: 15px;
     line-height: 20px;
   }
 
